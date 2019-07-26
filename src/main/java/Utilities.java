@@ -54,7 +54,7 @@ public class Utilities {
     public static String configReader(String key) {
         Properties prop = new Properties();
         try {
-            prop.load(new FileInputStream("/Users/aigulzhaanbaeva/IdeaProjects/CukesVytrack/config.properties"));
+            prop.load(new FileInputStream("config.properties"));
         } catch (IOException e) {
             e.printStackTrace();
         }
