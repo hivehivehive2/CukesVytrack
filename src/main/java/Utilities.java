@@ -19,7 +19,7 @@ public class Utilities {
 
     //GIVES THE TIME WHEN TEST WAS RUN, "PASS" , MESSAGE (that you pass), and SCREENSHOT IF PASS.
     public static void logInfo(String msg, boolean screenshot){ //call in StepDeffs
-        Date date=new Date();
+        Date date = new Date();
         Hooks.currentScenario.write(date+" Pass: "+msg);
         if(screenshot){
             screenShot();

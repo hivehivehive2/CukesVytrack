@@ -16,6 +16,7 @@ public class Hooks {
         driver = Driver.getDriver();
         String url = "https://qa2.vytrack.com/user/login";
         driver.get(url);
+        Utilities.waitFor(2);
 
         //GIVES DATE(TIME), MESSAGE and URL, without SCREENSHOT (because of False)
         Utilities.logInfo("Successfully navigated to "+url,false);

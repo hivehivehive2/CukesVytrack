@@ -2,7 +2,7 @@ import cucumber.api.java.en.And;
 import cucumber.api.java.en.Given;
 import cucumber.api.java.en.Then;
 
-public class MyStepdefs {
+public class StepDefs {
 
     CommonImplementation impl = new CommonImplementation();
 
@@ -46,6 +46,7 @@ public class MyStepdefs {
     @And("I verify that I can access {string} page")
     public void iVerifyThatICanAccessPage(String page) {
         impl.verifyCanAccessPage(page);
+        Utilities.logInfo("Successfully accessed " + page + " page.", true);
     }
 
     @Then("I verify that I cannot access {string} page")
@@ -56,5 +57,13 @@ public class MyStepdefs {
     @Then("Message {string} should be displayed")
     public void message_should_be_displayed(String msg) {
         impl.messageShouldBeDisplayed(msg);
+        Utilities.logInfo(msg + " is succesfully displayed.", true);
     }
+
+    @Given("Login as Valid user")
+    public void loginAsValidUser() {
+        impl.loginAsValidUser();
+    }
+
+
 }
