@@ -7,31 +7,36 @@ Feature: Daily Repeat Tests
     Then I click on Create Calendar Event button
     And I click on "Repeat" checkbox
     Then I Verify that in Repeats dropDown "Daily" is selected by default
-#    And Verify day(s) checkbox is selected and default value is 1
-#    And Verify summary says Daily every 1 day
-#    When Check the weekday checkbox
-#    Then Verify that days input now disabled
-#    And Verify summary says Daily every weekday
+    And Verify day(s) checkbox is selected and default value is 1
+    And Verify summary says Daily every 1 day
+    When Check the weekday checkbox
+    Then Verify that days input now disabled
+    And Verify summary says Daily every weekday
 
 
   Scenario: Daily repeat option, Repeat every, default values
-    Given Log in as Valid user
-    When Go to Activities -> Calendar Events
-    Then Click on create new calendar event
-    Then Click on Repeat checkbox
-    And Verify that Daily is selected by default
+    Given Login as Valid user
+    Then I Navigate to "Activities" module
+    And I click "Calendar Events" option
+    Then I click on Create Calendar Event button
+    And I click on "Repeat" checkbox
+    Then I Verify that in Repeats dropDown "Daily" is selected by default
     And Verify day(s) checkbox is selected and default value is 1
     And Verify summary says Daily every 1 day
 
-#  Scenario: Daily repeat option, Repeat every day(s), error messages
-#  Go to Activities -> Calendar Events
-#  3. Click on create new calendar event
-#  4. Click on Repeat checkbox
-#  5. Test the day(s) input entering different values (boundary value analysis)
-#  6. Verify error messages The value have not to be less than 1. and The value have not to be
-#  more than 99. occur when values are too big or small
-#  7. Verify that error messages disappear when valid values are entered
-#
+  Scenario: Daily repeat option, Repeat every day(s), error messages
+    Given Login as Valid user
+    Then I Navigate to "Activities" module
+    And I click "Calendar Events" option
+    Then I click on Create Calendar Event button
+    And I click on "Repeat" checkbox
+
+    And Test the day(s) input entering different values (boundary value analysis)
+    And 
+    And Verify error messages The value have not to be less than 1.
+    And The value have not to be more than 99. occur when values are too big or small
+    And Verify that error messages disappear when valid values are entered
+
 #  Scenario: Daily repeat option, Repeat every day(s), functionality
 #  Go to Activities -> Calendar Events
 #  3. Click on create new calendar event

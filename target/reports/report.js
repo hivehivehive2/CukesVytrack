@@ -9,7 +9,7 @@ formatter.scenario({
   "description": "",
   "keyword": "Scenario"
 });
-formatter.write("Mon Jul 29 20:21:27 EDT 2019 Pass: Successfully navigated to https://qa2.vytrack.com/user/login");
+formatter.write("Tue Aug 06 23:34:53 EDT 2019 Pass: Successfully navigated to https://qa2.vytrack.com/user/login");
 formatter.before({
   "status": "passed"
 });
@@ -30,7 +30,7 @@ formatter.step({
 formatter.match({
   "location": "StepDefs.iNavigateToModule(String)"
 });
-formatter.write("Mon Jul 29 20:21:37 EDT 2019 Pass: Successfully navigated to the Activities module.");
+formatter.write("Tue Aug 06 23:35:04 EDT 2019 Pass: Successfully navigated to the Activities module.");
 formatter.embedding("image/png", "embedded0.png");
 formatter.result({
   "status": "passed"
@@ -74,10 +74,50 @@ formatter.step({
 formatter.match({
   "location": "StepDefs_Activities.iVerifyThatInRepeatsDropDownIsSelectedByDefault(String)"
 });
-formatter.write("Mon Jul 29 20:21:50 EDT 2019 Pass: Daily is selected by Default in Repeats Field Box");
+formatter.write("Tue Aug 06 23:35:17 EDT 2019 Pass: Daily is selected by Default in Repeats Field Box");
 formatter.embedding("image/png", "embedded3.png");
 formatter.result({
   "status": "passed"
+});
+formatter.step({
+  "name": "Verify day(s) checkbox is selected and default value is 1",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "Verify summary says Daily every 1 day",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "Check the weekday checkbox",
+  "keyword": "When "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "Verify that days input now disabled",
+  "keyword": "Then "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
+});
+formatter.step({
+  "name": "Verify summary says Daily every weekday",
+  "keyword": "And "
+});
+formatter.match({});
+formatter.result({
+  "status": "undefined"
 });
 formatter.after({
   "status": "passed"
